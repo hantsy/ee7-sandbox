@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html" 
+      xmlns:f="http://java.sun.com/jsf/core">
+    <f:view>
+        <f:metadata>
+            <f:viewParam name="flag" value="#{viewActionBean.flag}"/>
+            <f:viewAction action="#{viewActionBean.init()}" immediate="true" />
+        </f:metadata>
+        <h:head>
+            <title>View Action</title>
+            <meta name="viewport" content="width=device-width" />
+        </h:head>
+        <h:body>
+            <p> View Action</p>
+        </h:body>
+    </f:view>
+</html>
