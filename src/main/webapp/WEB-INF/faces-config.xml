@@ -6,4 +6,20 @@
     <lifecycle>
         <phase-listener>com.hantsylabs.example.ee7.jsf.DebugPhaseListener</phase-listener>
     </lifecycle>
+    <application>
+        <resource-library-contracts>
+            <contract-mapping>
+                <url-pattern>/themed-alt/*</url-pattern>
+                <contracts>alternative</contracts>
+            </contract-mapping>
+            <contract-mapping>
+                <url-pattern>/themed-default/*</url-pattern>
+                <contracts>default</contracts>
+            </contract-mapping>
+<!--            <contract-mapping>
+                <url-pattern>/themed-dyn/*</url-pattern>
+                <contracts>#{themeSwitcher.theme}</contracts>
+            </contract-mapping>-->
+        </resource-library-contracts>
+    </application>
 </faces-config>
