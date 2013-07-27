@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>jsf-viewaction</artifactId>
-    <packaging>war</packaging>
+    <artifactId>ee7-common</artifactId>
+    <packaging>jar</packaging>
 
-    <name>JSF 2.2: View Action Example</name>
+    <name>JSF 2.2: Common library</name>
 
     <parent>
         <groupId>com.hantsylabs.example.ee7</groupId>
@@ -16,7 +16,6 @@
         <dependency>
             <groupId>javax</groupId>
             <artifactId>javaee-api</artifactId>
-
         </dependency>
     </dependencies>
 
@@ -26,15 +25,6 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
 
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-war-plugin</artifactId>
-
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-dependency-plugin</artifactId>
             </plugin>
         </plugins>
     </build>
