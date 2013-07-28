@@ -51,11 +51,10 @@
                         <failOnMissingWebXml>false</failOnMissingWebXml>
                     </configuration>
                 </plugin>
-<<<<<<< HEAD
-<!--                <plugin>
-=======
+<!--                
+
                 <plugin>
->>>>>>> 2a377ac45e526610da7901f77ab44352c7203706
+
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-dependency-plugin</artifactId>
                     <version>2.6</version>
@@ -79,11 +78,8 @@
                             </configuration>
                         </execution>
                     </executions>
-<<<<<<< HEAD
+
                 </plugin>-->
-=======
-                </plugin>
->>>>>>> 2a377ac45e526610da7901f77ab44352c7203706
             </plugins>
         </pluginManagement>
     </build>

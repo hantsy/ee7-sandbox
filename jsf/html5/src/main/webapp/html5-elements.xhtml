@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:jsf="http://xmlns.jcp.org/jsf"
+      xmlns:h="http://xmlns.jcp.org/jsf/html" 
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <f:view>
+        <h:head>
+            <title>Html5 Support</title>
+        </h:head>
+        <h:body>
+            <h1> Html5 Support: Passthrough Elements</h1>
+           
+            <h:form prependId="false">
+                 <h:messages showDetail="false" showSummary="true"/>
+                 Text: <input jsf:id="text" type="text" jsf:value="#{html5Bean.text}" required="required" placeholder="Type text here..."/>  
+                <br/>
+                Url: <input jsf:id="url" type="url"  jsf:value="#{html5Bean.url}"/><br/>
+
+                Email: <input type="email" jsf:id="email" jsf:value="#{html5Bean.email}" /><br/>
+                Number: <input jsf:id="number" type="number" min="1" max="10"  jsf:value="#{html5Bean.number}" >
+                    <f:convertNumber minFractionDigits="0"/>
+                </input> <br/>
+                Range: <input jsf:id="range"  type="range" min="1" max="10"  jsf:value="#{html5Bean.range}">
+                    <f:convertNumber minFractionDigits="0"/>
+                </input><br/>
+
+                Date: <input jsf:id="date" type="date" jsf:value="#{html5Bean.date}" >
+                    <f:convertDateTime pattern="yyyy-MM-dd"/>
+                </input><br/>
+                <input type="submit" jsf:id="submit" value="Save" jsf:action="#{html5Bean.submit()}">            
+                </input>
+            </h:form>
+
+            <h:panelGroup id="out">
+                Text:  <h:outputText value="#{html5Bean.text}"/><br/>
+                Url:  <h:outputText value="#{html5Bean.url}"/><br/>
+                Email:  <h:outputText value="#{html5Bean.email}"/><br/>
+                Number:  <h:outputText value="#{html5Bean.number}"/><br/>
+                Range:  <h:outputText value="#{html5Bean.range}"/><br/>
+                Date:  <h:outputText value="#{html5Bean.date}"/><br/>
+            </h:panelGroup>
+        </h:body>
+    </f:view>
+</html>

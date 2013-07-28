@@ -7,13 +7,14 @@
             <title>File Upload</title>
         </h:head>
         <h:body>
-            <h1> File Upload</h1>
+            <h1> File Upload(Ajax)</h1>
             <h:messages globalOnly="true" showDetail="false" showSummary="true"/>
             <h:form enctype="multipart/form-data">
-                <h:inputFile id="file" value="#{fileUploadBean.file}" >
+                 <h:inputFile id="file" value="#{fileUploadBean.file}" >
                     <f:validator validatorId="fileValidator"/>
-                </h:inputFile>            
-                 <h:message for="file"/>
+                    <f:ajax execute="@this" render="@form"/>
+                </h:inputFile>
+                <h:message for="file"/>
                 <h:commandButton value="Upload" action="#{fileUploadBean.upload()}"/>
             </h:form>
         </h:body>
