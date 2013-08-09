@@ -4,7 +4,7 @@
     <artifactId>jsf-theme</artifactId>
     <packaging>war</packaging>
 
-    <name>JSF 2.2: Resources Library Contracts Example</name>
+    <name>JSF 2.2: Resource Library Contracts Example</name>
 
     <parent>
         <groupId>com.hantsylabs.example.ee7</groupId>

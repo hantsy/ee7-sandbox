@@ -4,7 +4,7 @@
     <artifactId>jsf-theme-resources</artifactId>
     <packaging>jar</packaging>
 
-    <name>JSF 2.2: Resources Library Contracts (Jar)</name>
+    <name>JSF 2.2: Resource Library Contracts (Jar)</name>
 
     <parent>
         <groupId>com.hantsylabs.example.ee7</groupId>
@@ -12,13 +12,7 @@
         <version>1.0-SNAPSHOT</version>
         <relativePath>../</relativePath>
     </parent>
-    <dependencies>
-        <dependency>
-            <groupId>javax</groupId>
-            <artifactId>javaee-api</artifactId>
-        </dependency>
-    </dependencies>
-
+    
     <build>
         <plugins>
             <plugin>
