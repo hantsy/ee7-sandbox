@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <head>
+        <title>Registration</title>
+    </head>
+    <body>
+        <h:form prependId="false">
+            <h1>Step 1: read and accept the license</h1>
+            <p> Flow bean name: #{registrationBean.name}</p>
+            <h:messages globalOnly="true" showDetail="false" showSummary="true"/>
+
+            <p>LICENSE CONTENT HERE</p>
+            <p><h:selectBooleanCheckbox id="input" value="#{registrationBean.licenseAccepted}" /></p>
+            <p><h:commandButton id="return" value="return" action="taskFlowReturn1" /></p>
+            <p><h:commandButton id="next" value="Next" action="#{registrationBean.accept}" /></p>
+            <p><h:commandButton id="home" value="home" action="/index" /></p>
+        </h:form>
+    </body>
+</html>
