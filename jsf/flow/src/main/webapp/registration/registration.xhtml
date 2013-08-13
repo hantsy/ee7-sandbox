@@ -13,9 +13,9 @@
 
             <p>LICENSE CONTENT HERE</p>
             <p><h:selectBooleanCheckbox id="input" value="#{registrationBean.licenseAccepted}" /></p>
-            <p><h:commandButton id="return" value="return" action="taskFlowReturn1" /></p>
-            <p><h:commandButton id="next" value="Next" action="#{registrationBean.accept}" /></p>
-            <p><h:commandButton id="home" value="home" action="/index" /></p>
+          
+            <p><h:commandButton id="next" value="next" action="#{registrationBean.accept}" /></p>
+            <p><h:commandButton id="return" value="return" action="taskFlowReturn1" /><h:commandButton id="home" value="home" action="/index" /><h:commandButton id="userList" value="User List" action="/users" /></p>
         </h:form>
     </body>
 </html>

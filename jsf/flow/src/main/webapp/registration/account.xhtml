@@ -59,10 +59,10 @@
             <p>Password: <h:inputSecret id="password" value="#{registrationBean.user.password}" /><h:message for="password"/></p>
             <p>Confirm Password: <h:inputSecret id="passwordConfirm" value="#{registrationBean.passwordConfirm}" /></p>
 
-            <p><h:commandButton id="pre" value="Previous" action="registration" immediate="true"/></p>
-            <p><h:commandButton id="next" value="Next" action="#{registrationBean.confirm}" /></p>
-            <p><h:commandButton id="return" value="return" action="taskFlowReturn1"   immediate="true"/></p>
-            <p><h:commandButton id="home" value="home" action="/index" /></p>
+            <p><h:commandButton id="pre" value="back" action="registration" immediate="true"/></p>
+            <p><h:commandButton id="next" value="next" action="#{registrationBean.confirm}" /></p>
+            <p><h:commandButton id="return" value="return" action="taskFlowReturn1" /><h:commandButton id="home" value="home" action="/index" /><h:commandButton id="userList" value="User List" action="/users" /></p>
+ 
         </h:form>
     </body>
 </html>

@@ -82,7 +82,7 @@ public class RegistrationBean implements Serializable {
         }
         
         if (userService.findByEmail(this.user.getEmail()) != null) {
-            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "User " + this.user.getEmail() + "!", "User " + this.user.getEmail() + "!"));
+            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "User " + this.user.getEmail() + " is existed!", "User " + this.user.getEmail() + " is existed!"));
             return null;
         }
 
