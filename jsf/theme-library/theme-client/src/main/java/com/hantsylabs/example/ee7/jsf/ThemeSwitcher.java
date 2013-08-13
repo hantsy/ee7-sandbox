@@ -5,7 +5,6 @@
 package com.hantsylabs.example.ee7.jsf;
 
 import java.io.Serializable;
-import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.enterprise.context.SessionScoped;
 import javax.enterprise.inject.Instance;

@@ -39,6 +39,7 @@
  */
 package com.hantsylabs.example.ee7.jsf;
 
+import javax.enterprise.context.ApplicationScoped;
 import javax.enterprise.inject.Produces;
 import javax.faces.flow.Flow;
 import javax.faces.flow.builder.FlowBuilder;
@@ -48,6 +49,7 @@ import javax.faces.flow.builder.FlowDefinition;
 /**
  * @author Arun Gupta
  */
+@ApplicationScoped
 public class Flow1 {
 
     private static final long serialVersionUID = -7623501087369765218L;
