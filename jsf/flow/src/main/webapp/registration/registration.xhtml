@@ -6,14 +6,15 @@
         <title>Registration</title>
     </head>
     <body>
+        <h1>Step 1: read and accept the license</h1>
+        <p> Flow bean name: #{registrationBean.name}</p>
         <h:form prependId="false">
-            <h1>Step 1: read and accept the license</h1>
-            <p> Flow bean name: #{registrationBean.name}</p>
+
             <h:messages globalOnly="true" showDetail="false" showSummary="true"/>
 
             <p>LICENSE CONTENT HERE</p>
             <p><h:selectBooleanCheckbox id="input" value="#{registrationBean.licenseAccepted}" /></p>
-          
+
             <p><h:commandButton id="next" value="next" action="#{registrationBean.accept}" /></p>
             <p><h:commandButton id="return" value="return" action="taskFlowReturn1" /><h:commandButton id="home" value="home" action="/index" /><h:commandButton id="userList" value="User List" action="/users" /></p>
         </h:form>

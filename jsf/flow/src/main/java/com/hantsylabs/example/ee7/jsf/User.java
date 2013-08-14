@@ -108,6 +108,11 @@ public class User implements Serializable{
         }
         return true;
     }
+
+    @Override
+    public String toString() {
+        return "User{" + "firstName=" + firstName + ", lastName=" + lastName + ", email=" + email + ", password=" + password + ", activated=" + activated + ", activatedOn=" + activatedOn + '}';
+    }
     
     
 }
