@@ -1,22 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>jsf-parent</artifactId>
+    <artifactId>jsf-flow-library</artifactId>
     <packaging>pom</packaging>
-    <name>JSF 2.2: Example(POM)</name>
+    <name>JSF 2.2: Flow Library Example(POM)</name>
     <parent>
         <groupId>com.hantsylabs.example.ee7</groupId>
-        <artifactId>ee7-sandbox</artifactId>
+        <artifactId>jsf-parent</artifactId>
         <version>1.0-SNAPSHOT</version>
         <relativePath>../</relativePath>
     </parent>
     <modules>
-        <module>viewaction</module>
-        <module>html5</module>
-        <module>theme</module>
-        <module>theme-library</module>
-        <module>flow</module>
-        <module>flow-library</module>
-        <module>fileupload</module>
+        <module>flow-client</module>
+        <module>flow-resources</module>
     </modules>
 </project>

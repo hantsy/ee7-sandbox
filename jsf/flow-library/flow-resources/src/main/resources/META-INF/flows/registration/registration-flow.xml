@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<faces-config version="2.2" xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="
+              http://xmlns.jcp.org/xml/ns/javaee
+              http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
+
+    <flow-definition id="registration">
+        <flow-return id="taskFlowReturn1">
+            <from-outcome>#{registrationBean.returnValue}</from-outcome>
+        </flow-return>
+
+        <flow-call id="callActivationFlow">
+            <flow-reference>
+                <flow-id>activation</flow-id>
+            </flow-reference>
+            <outbound-parameter>
+                <name>email</name>
+                <value>#{registrationBean.user.email}</value>
+            </outbound-parameter>
+        </flow-call>
+    </flow-definition>
+</faces-config>
