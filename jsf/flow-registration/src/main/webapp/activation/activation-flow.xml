@@ -6,6 +6,13 @@
               http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
 
     <flow-definition id="activation">
+        <flow-return id="taskFlowReturn1">
+            <from-outcome>/index</from-outcome>
+        </flow-return>
+
+        <flow-return id="taskFlowReturn2">
+            <from-outcome>/users</from-outcome>
+        </flow-return>
         <inbound-parameter>
             <name>email</name>
             <value>#{activationBean.email}</value>

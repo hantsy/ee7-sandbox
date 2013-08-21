@@ -1,17 +1,14 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets" template="/template.xhtml">
 
-    <head>
-        <title>Account is activated successfully!</title>
-    </head>
-    <body bgcolor="yellow">
+    <ui:define name="content">
 
-        <h1>Account is activated successfully!</h1>
+        <h2>Account is activated successfully!</h2>
         <p> #{activationBean.email} is activated now !</p>
-        <h:messages globalOnly="true" showDetail="false" showSummary="true"/>
-        <h:form prependId="false">
+
               <p><h:commandButton id="return" value="return" action="taskFlowReturn1" /><h:commandButton id="home" value="home" action="/index" /><h:commandButton id="userList" value="User List" action="/users" /></p>
-        </h:form>
-    </body>
-</html>
+
+    </ui:define>
+</ui:composition>

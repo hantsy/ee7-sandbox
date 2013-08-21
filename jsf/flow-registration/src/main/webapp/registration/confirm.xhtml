@@ -1,20 +1,15 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets" template="/template.xhtml">
 
-    <head>
-        <title>Registration</title>
-    </head>
-    <body>
-        <h1>Step 3: Confirm the registration info.</h1>
+    <ui:define name="content">
+        <h2>Step 3: Confirm the registration info.</h2>
         <p> Flow bean name: #{registrationBean.name}</p>
-        <h:form prependId="false">
-            <h:messages globalOnly="true" showDetail="false" showSummary="true"/>
-            <p>User info #{registrationBean.user}</p>
+        <h:messages globalOnly="true" showDetail="false" showSummary="true"/>
+        <p>User info #{registrationBean.user}</p>
 
-            <p><h:commandButton id="back" value="back" action="account"/></p>
-            <p><h:commandButton id="callActivationFlow" value="Enter Activation Flow" action="callActivationFlow" /></p>
-            <p><h:commandButton id="return" value="return" action="taskFlowReturn1" /><h:commandButton id="home" value="home" action="/index" immediate="true"/><h:commandButton id="userList" value="User List" action="/users" immediate="true" /></p>
-        </h:form>
-    </body>
-</html>
+        <p><h:commandButton id="back" value="back" action="account"/></p>
+        <p><h:commandButton id="callActivationFlow" value="Enter Activation Flow" action="callActivationFlow" /></p>
+    </ui:define>
+</ui:composition>

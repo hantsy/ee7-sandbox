@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+    <head>
+        <title>Registration</title>
+    </head>
+    <body>
+        <h1>Faces Flow example: Registration</h1>
+        <h:form prependId="false">
+
+            <h:messages globalOnly="true" showDetail="false" showSummary="true"/>
+
+            <ui:insert name="content"/>
+            <p><h:commandButton id="home" value="Home(Flow Return)" action="taskFlowReturn1" immediate="true"/><h:commandButton id="userList" value="User List(Flow Return)" action="taskFlowReturn2" immediate="true" /></p>
+            <p><h:commandButton id="nonFlowAction" value="None Flow View" action="#{nonFlowBean.go}" immediate="true"/> <h:commandButton id="indexAction" value="Home" action="/index" immediate="true"/><h:commandButton id="userListAction" value="User List" action="/users" immediate="true" /></p>
+        </h:form>
+    </body>
+</html>

@@ -1,19 +1,13 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets" template="/template.xhtml">
 
-    <head>
-        <title>Please input activation code to activate your account</title>
-    </head>
-    <body  bgcolor="yellow">
-        <h:form prependId="false">
-            <h1>Please input activation code to activate your account</h1>
-            <h:messages globalOnly="true" showDetail="false" showSummary="true"/>
+    <ui:define name="content">
+            <h2>Please input activation code to activate your account</h2>
             <p><em>Ideally, the activation token value or activation link could be sent by email after the registration progress is done.</em></p>
             <p>In this example input <strong>123</strong> for test purpose.</p>
             <p>Token value: <h:inputText id="input" value="#{activationBean.tokenValue}" /></p>
             <p><h:commandButton id="activate" value="Activate account now!" action="#{activationBean.activate}" /></p>
-            <p><h:commandButton id="return" value="return" action="taskFlowReturn1" /><h:commandButton id="home" value="home" action="/index" /><h:commandButton id="userList" value="User List" action="/users" /></p>
-        </h:form>
-    </body>
-</html>
+    </ui:define>
+</ui:composition>
