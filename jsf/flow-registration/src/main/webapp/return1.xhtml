@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <head>
+         <title>Java EE 7 sandbox application</title>
+    </head>
+    <body>
+         <h1>Java EE 7 sandbox application</h1>
+         <h2>Flow return page.</h2>
+        
+    <h:form prependId="false">
+        <p>Has a flow: #{null != facesContext.application.flowHandler.currentFlow}.</p>
+        
+        <p>flowScope value (should be empty): #{flowScope.value}.</p>
+
+        <p><h:commandButton id="index" value="home" action="/index" /></p>
+        
+    </h:form>
+</body>
+</html>

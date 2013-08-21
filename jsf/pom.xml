@@ -17,6 +17,7 @@
         <module>theme-library</module>
         <module>flow</module>
         <module>flow-library</module>
+		<module>flow-registration</module>
         <module>fileupload</module>
     </modules>
 </project>

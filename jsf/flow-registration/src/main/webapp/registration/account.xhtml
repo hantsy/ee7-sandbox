@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <head>
+        <title>Registration</title>
+    </head>
+    <body>
+        <h1>Step 2: please setup your account info.</h1>
+        <p> Flow bean name: #{registrationBean.name}</p>
+        <h:form prependId="false">
+
+            <h:messages globalOnly="true" showDetail="false" showSummary="true"/>
+            <p>First Name: <h:inputText id="firstName" value="#{registrationBean.user.firstName}" /><h:message for="firstName"/></p>
+            <p>Last Name: <h:inputText id="lastName" value="#{registrationBean.user.lastName}" /><h:message for="lastName"/></p>
+            <p>Email: <h:inputText id="email" value="#{registrationBean.user.email}" /><h:message for="email"/></p>
+            <p>Password: <h:inputSecret id="password" value="#{registrationBean.user.password}" /><h:message for="password"/></p>
+            <p>Confirm Password: <h:inputSecret id="passwordConfirm" value="#{registrationBean.passwordConfirm}" /></p>
+
+            <p><h:commandButton id="pre" value="back" action="registration" immediate="true"/></p>
+            <p><h:commandButton id="next" value="next" action="#{registrationBean.confirm}" /></p>
+            <p><h:commandButton id="return" value="return" action="taskFlowReturn1" /><h:commandButton id="home" value="home" action="/index" immediate="true"/><h:commandButton id="userList" value="User List" action="/users" immediate="true" /></p>
+
+        </h:form>
+    </body>
+</html>

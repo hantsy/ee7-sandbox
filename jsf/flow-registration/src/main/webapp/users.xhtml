@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+    <head>
+        <title>Registration Flow</title>
+    </head>
+    <body>
+        <h1>Registration Flow</h1>
+
+        <h:form prependId="false">
+            
+            <p><h:commandButton id="resgistration" value="Enter Registration" action="registration">
+                    <f:attribute name="toFlowDocumentId" value=""/>
+                </h:commandButton></p>
+            
+            <table width="100%" style="border:thin solid gray; ">
+                <tr><td>Name</td><td>Email</td><td>Activated</td><td>Activated Date</td></tr>
+            <ui:repeat value="#{userService.userList}" var="user">
+                <tr><td>#{user.firstName} #{user.lastName}</td><td>#{user.email}</td><td>#{user.activated}</td><td>#{user.activatedOn}</td></tr>
+            </ui:repeat>             
+            </table>
+        </h:form>
+    </body>
+</html>
