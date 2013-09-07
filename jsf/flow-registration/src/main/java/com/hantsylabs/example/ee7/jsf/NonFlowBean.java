@@ -15,7 +15,7 @@ import javax.enterprise.inject.Model;
 public class NonFlowBean {
     
     public String go(){
-        return "/nonFlow";
+        return "/nonFlow?faces-redirect=true";
     }
     
 }

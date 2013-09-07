@@ -6,4 +6,12 @@
     <lifecycle>
         <phase-listener>com.hantsylabs.example.ee7.jsf.DebugPhaseListener</phase-listener>
     </lifecycle>
+    <navigation-rule>
+        <from-view-id>*</from-view-id>
+        <navigation-case>
+            <from-outcome>to-usersList</from-outcome>
+            <to-view-id>/users</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
 </faces-config>
