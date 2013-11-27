@@ -12,5 +12,6 @@
     </parent>
     <modules>
         <module>scripts</module>
+		<module>converter</module>
     </modules>
 </project>
