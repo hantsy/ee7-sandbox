@@ -10,7 +10,7 @@
     <name>Java EE 7 Sandbox(POM)</name>
     <modules>
         <module>jsf</module>
-        <!--<module>jpa</module>-->
+        <module>jpa</module>
     </modules>
     <properties>
         <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
