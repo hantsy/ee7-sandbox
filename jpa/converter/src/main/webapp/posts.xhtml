@@ -15,7 +15,7 @@
             <table class="table" style="border-width: 1px; padding: 5px" border="1px">
 
                 <tr>
-                    <th>Title</th><th>Body</th><th>Tags</th><th>Created</th>
+                    <th>Title</th><th>Body</th><th>Tags</th><th>Created</th><th></th>
                 </tr>
 
                 <ui:repeat value="#{postsBean.posts}" var="p">
@@ -26,6 +26,11 @@
                         <td>#{p.body}</td>
                         <td>#{p.tags}</td>
                         <td>#{p.created}</td>
+                        <td>
+                            <h:link outcome="edit.xhtml" value="Edit">
+                                <f:param name="id" value="#{p.id}"/>
+                            </h:link>
+                        </td>
                     </tr>
                 </ui:repeat>
             </table>

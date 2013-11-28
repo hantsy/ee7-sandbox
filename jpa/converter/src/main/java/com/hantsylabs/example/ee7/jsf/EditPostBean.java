@@ -24,20 +24,38 @@ public class EditPostBean {
 
     @Inject
     Logger log;
-    
+
     @PersistenceContext
     EntityManager em;
 
     private Post post;
 
+    private Long id;
+
     public void init() {
-        log.info("call init");    
-        this.post=new Post();
+        log.info("call init, id @" + id);
+        if (id != null) {
+            this.post = em.find(Post.class, this.id);
+        } else {
+            this.post = new Post();
+        }
     }
 
-    public String save(){
-        em.persist(this.post);
+    public String save() {
+        if (this.id != null) {
+            em.merge(this.post);
+        } else {
+            em.persist(this.post);
+        }
         return "posts?faces-redirect=true";
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public Post getPost() {
@@ -48,5 +66,4 @@ public class EditPostBean {
         this.post = post;
     }
 
-    
 }
