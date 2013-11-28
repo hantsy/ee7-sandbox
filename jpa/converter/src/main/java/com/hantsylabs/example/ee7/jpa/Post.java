@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package com.hantsylabs.example.ee7.jpa;
 
 import java.io.Serializable;
@@ -16,35 +15,52 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.PrePersist;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
+import javax.persistence.Converts;
+import javax.persistence.EntityListeners;
 
 /**
  *
  * @author hantsy
  */
 @Entity
-@Table(name="POSTS")
+@Table(name = "POSTS")
+@Converts(value = {
+    @Convert(attributeName = "tags", converter = ListToStringConveter.class)
+})
+@EntityListeners(PostListener.class)
 public class Post implements Serializable {
+
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name="ID")
+    @Column(name = "ID")
     private Long id;
-    
-    @Column(name="TITLE")
+
+    @Column(name = "TITLE")
     private String title;
-    
-    @Column(name="BODY")
+
+    @Column(name = "BODY")
     private String body;
-    
+
     @Temporal(javax.persistence.TemporalType.DATE)
-    @Column(name="CREATED")
+    @Column(name = "CREATED_DATE")
     private Date created;
     
-    @Column(name="TAGS")
-    @Convert(converter = ListToStringConveter.class)
-    private List<String> tags=new ArrayList<>();
+    @Temporal(javax.persistence.TemporalType.DATE)
+    @Column(name = "LAST_MODIFIED_DATE")
+    private Date lastModified;
+
+    @Column(name = "TAGS")
+    // @Convert(converter = ListToStringConveter.class)
+    private List<String> tags = new ArrayList<>();
+
+    @PrePersist
+    public void prePresist() {
+        this.created = new Date();
+    }
 
     public Long getId() {
         return id;
@@ -78,6 +94,22 @@ public class Post implements Serializable {
         this.created = created;
     }
 
+    public List<String> getTags() {
+        return tags;
+    }
+
+    public void setTags(List<String> tags) {
+        this.tags = tags;
+    }
+
+    public Date getLastModified() {
+        return lastModified;
+    }
+
+    public void setLastModified(Date lastModified) {
+        this.lastModified = lastModified;
+    }
+
     @Override
     public int hashCode() {
         int hash = 0;
@@ -102,5 +134,5 @@ public class Post implements Serializable {
     public String toString() {
         return "com.hantsylabs.example.ee7.jpa.Post[ id=" + id + " ]";
     }
-    
+
 }

@@ -9,11 +9,11 @@
         <exclude-unlisted-classes>false</exclude-unlisted-classes>-->
         <properties>
             <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
-            <property name="javax.persistence.schema-generation.create-source" value="script"/>
-            <property name="javax.persistence.schema-generation.drop-source" value="script"/>
-            <property name="javax.persistence.schema-generation.drop-script-source" value="META-INF/drop-script.sql"/>
+            <property name="javax.persistence.schema-generation.create-source" value="metadata"/>
+            <property name="javax.persistence.schema-generation.drop-source" value="metadata"/>
+  <!--           <property name="javax.persistence.schema-generation.drop-script-source" value="META-INF/drop-script.sql"/>
             <property name="javax.persistence.schema-generation.create-script-source" value="META-INF/create-script.sql"/>
-            <property name="javax.persistence.sql-load-script-source" value="META-INF/load-script.sql"/>
+           <property name="javax.persistence.sql-load-script-source" value="META-INF/load-script.sql"/>-->
             <property name="eclipselink.logging.level" value="FINE"/> 
         </properties>
     </persistence-unit>

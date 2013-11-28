@@ -12,20 +12,26 @@
         </h:head>
         <h:body>
             <h1>Post List</h1>
-            <table class="table">
+            <table class="table" style="border-width: 1px; padding: 5px" border="1px">
 
                 <tr>
-                    <th>Title</th><th>Body</th><th>Created</th>
+                    <th>Title</th><th>Body</th><th>Tags</th><th>Created</th>
                 </tr>
 
                 <ui:repeat value="#{postsBean.posts}" var="p">
                     <tr>
-                        <td>#{p.title}</td>
+                        <td>
+                            #{p.title}
+                        </td>
                         <td>#{p.body}</td>
+                        <td>#{p.tags}</td>
                         <td>#{p.created}</td>
                     </tr>
                 </ui:repeat>
             </table>
+            <p>
+            <h:button outcome="edit.xhtml" value=" Add a new Post"></h:button>                
+            </p>
         </h:body>
     </f:view>
 </html>
