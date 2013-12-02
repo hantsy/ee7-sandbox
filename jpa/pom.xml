@@ -13,5 +13,6 @@
     <modules>
         <module>scripts</module>
 		<module>converter</module>
+		<module>bulk</module>
     </modules>
 </project>

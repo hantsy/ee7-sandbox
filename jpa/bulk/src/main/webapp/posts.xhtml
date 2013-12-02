@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:h="http://xmlns.jcp.org/jsf/html" 
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <f:view>
+        <f:metadata>
+            <f:viewAction action="#{postsBean.init()}"/>
+        </f:metadata>
+        <h:head>
+            <title>Posts</title>
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        </h:head>
+        <h:body>
+            <h1>Post List</h1>
+            <h:form id="f" prependId="false">
+                <h:panelGroup id="buttons" layout="block">
+                    <h:commandButton value="Update" action="#{postsBean.update}" rendered="#{not empty postsBean.checkedList}">
+                        <f:ajax render=":f:table"/>
+                    </h:commandButton>
+                    <h:commandButton value="Delete" action="#{postsBean.delete}" rendered="#{not empty postsBean.checkedList}">
+                     <f:ajax render=":f:table"/>
+                    </h:commandButton>
+                </h:panelGroup>
+                <h:panelGroup id="table" layout="block">
+                    <table class="table" style="border-width: 1px; padding: 5px" border="1px">
+
+                        <tr>
+                            <th></th><th>Title</th><th>Body</th><th>Tags</th><th>Approved</th><th>Created</th><th></th>
+                        </tr>
+
+                        <ui:repeat value="#{postsBean.posts}" var="p">
+                            <tr>
+                            <td>
+                            <h:selectBooleanCheckbox value="#{postsBean.checked[p.id]}">
+                                <f:ajax execute="@this" render=":f:buttons"/>
+                            </h:selectBooleanCheckbox>    
+                            </td>
+                            <td>
+                                #{p.title}
+                            </td>
+                            <td>#{p.body}</td>
+                            <td>#{p.tags}</td>
+                            <td>#{p.approved}</td>
+                            <td>#{p.created}</td>
+                            <td>
+                            <h:link outcome="edit.xhtml" value="Edit">
+                                <f:param name="id" value="#{p.id}"/>
+                            </h:link>
+                            </td>
+                            </tr>
+                        </ui:repeat>
+                    </table>
+                </h:panelGroup>
+                <p>
+                <h:button outcome="edit.xhtml" value=" Add a new Post"></h:button>                
+                </p>
+            </h:form>
+        </h:body>
+    </f:view>
+</html>
