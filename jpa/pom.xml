@@ -14,5 +14,6 @@
         <module>scripts</module>
 		<module>converter</module>
 		<module>bulk</module>
+		<module>entitygraph</module>
     </modules>
 </project>
