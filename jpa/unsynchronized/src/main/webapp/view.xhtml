@@ -26,12 +26,12 @@
             </ui:repeat>
 
             <h2> Add Comment</h2>
-            <h:form prependId="false"> 
+            <h:form prependId="false">
                 <h:panelGrid columns="2">
                     <h:outputLabel for="body">Content</h:outputLabel>
                     <h:inputTextarea id="body" value="#{viewPostBean.commentBody}" rows="5"/>
                     <h:commandButton action="#{viewPostBean.save}" value="Save"></h:commandButton>
-                    <h:panelGroup/>
+                    <h:commandButton action="#{viewPostBean.saveWithJoinTransaction()}" value="Save(joinTransaction)"></h:commandButton>
                 </h:panelGrid>
             </h:form>
             <h:button outcome="posts.xhtml" value="Back to Post List"></h:button>

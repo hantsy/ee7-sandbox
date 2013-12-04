@@ -15,5 +15,6 @@
 		<module>converter</module>
 		<module>bulk</module>
 		<module>entitygraph</module>
+		<module>unsynchronized</module>
     </modules>
 </project>
