@@ -16,5 +16,6 @@
 		<module>bulk</module>
 		<module>entitygraph</module>
 		<module>unsynchronized</module>
+		<module>treat</module>
     </modules>
 </project>
