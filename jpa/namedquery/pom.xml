@@ -4,7 +4,7 @@
     <artifactId>jpa-namedquery</artifactId>
     <packaging>war</packaging>
 
-    <name>JPA 2.1: Create named queries programaticially</name>
+    <name>JPA 2.1: Programmatic Named Queries</name>
 
     <parent>
         <groupId>com.hantsylabs.example.ee7</groupId>
