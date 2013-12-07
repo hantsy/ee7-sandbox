@@ -17,5 +17,6 @@
 		<module>entitygraph</module>
 		<module>unsynchronized</module>
 		<module>treat</module>
+		<module>namedquery</module>
     </modules>
 </project>

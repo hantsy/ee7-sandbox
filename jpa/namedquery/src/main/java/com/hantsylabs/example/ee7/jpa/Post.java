@@ -9,8 +9,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import java.util.logging.Logger;
-import javax.inject.Inject;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Convert;
 import javax.persistence.Entity;
@@ -22,6 +21,11 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.Converts;
 import javax.persistence.EntityListeners;
+import javax.persistence.FetchType;
+import javax.persistence.NamedAttributeNode;
+import javax.persistence.NamedEntityGraph;
+import javax.persistence.NamedSubgraph;
+import javax.persistence.OneToMany;
 
 /**
  *
@@ -33,6 +37,20 @@ import javax.persistence.EntityListeners;
     @Convert(attributeName = "tags", converter = ListToStringConveter.class)
 })
 @EntityListeners(PostListener.class)
+@NamedEntityGraph(
+        name = "post",
+        attributeNodes = {
+            @NamedAttributeNode("title"),
+            @NamedAttributeNode(value = "comments", subgraph = "comments")
+        },
+        subgraphs = {
+            @NamedSubgraph(
+                    name = "comments",
+                    attributeNodes = {
+                        @NamedAttributeNode("content")}
+            )
+        }
+)
 public class Post implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -58,13 +76,14 @@ public class Post implements Serializable {
     @Column(name = "TAGS")
     // @Convert(converter = ListToStringConveter.class)
     private List<String> tags = new ArrayList<>();
-    
-//    @Inject
-//    transient Logger log;
+
+    private boolean approved = false;
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "post", orphanRemoval = true, fetch = FetchType.LAZY)
+    private List<Comment> comments = new ArrayList<>();
 
     @PrePersist
     public void prePresist() {
-        //log.info("call prePresist@Post");
         this.created = new Date();
     }
 
@@ -114,6 +133,22 @@ public class Post implements Serializable {
 
     public void setLastModified(Date lastModified) {
         this.lastModified = lastModified;
+    }
+
+    public boolean isApproved() {
+        return approved;
+    }
+
+    public void setApproved(boolean approved) {
+        this.approved = approved;
+    }
+
+    public List<Comment> getComments() {
+        return comments;
+    }
+
+    public void setComments(List<Comment> comments) {
+        this.comments = comments;
     }
 
     @Override
