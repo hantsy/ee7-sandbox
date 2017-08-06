@@ -6,8 +6,8 @@
                 template="/WEB-INF/layout/template.xhtml">
     <ui:define name="metadata">
         <f:metadata>
-            <f:event listener="#{taskHome.init()}" type="preRenderView" />
-            <!--  <f:viewAction action="#{taskHome.init()}" />-->
+            <!--  <f:event listener="#{taskHome.init}" type="preRenderView" />-->
+            <f:viewAction action="#{taskHome.init()}" />
         </f:metadata>
     </ui:define>
     <ui:define name="pageTitle"> TASK LIST</ui:define>
@@ -45,7 +45,7 @@
                                         </h4>
                                         <p>#{task.description}</p>
                                         <p>
-                                            <h:commandLink action="#{taskHome.markTaskDoing(task.id)}"
+                                            <h:commandLink action="#{taskHome.markTaskDoing(task.id)}" immediate="true"
                                                            styleClass="btn btn-sm btn-success" value="START">
                                                 <span class="glyphicon glyphicon-play" aria-hidden="true"></span>									
                                             </h:commandLink>
@@ -76,7 +76,7 @@
                                         <h4>##{task.id} #{task.name}</h4>
                                         <p>#{task.description}</p>
                                         <p>
-                                            <h:commandLink action="#{taskHome.markTaskDone(task.id)}"
+                                            <h:commandLink action="#{taskHome.markTaskDone(task.id)}" immediate="true"
                                                            styleClass="btn btn-sm btn-info">
                                                 <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
                                                 DONE
@@ -108,7 +108,7 @@
                                         <p>#{task.description}</p>
                                         <p>
 
-                                            <h:commandLink action="#{taskHome.deleteTask(task.id)}"
+                                            <h:commandLink action="#{taskHome.deleteTask(task.id)}" immediate="true"
                                                            styleClass="btn btn-sm btn-danger">
                                                 <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> DELETE
                                             </h:commandLink>

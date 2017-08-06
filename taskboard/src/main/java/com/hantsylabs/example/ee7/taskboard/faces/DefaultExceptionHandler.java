@@ -1,6 +1,6 @@
-package com.hantsylabs.example.ee8.jsf.faces;
+package com.hantsylabs.example.ee7.taskboard.faces;
 
-import com.hantsylabs.example.ee8.jsf.domain.TaskNotFoundException;
+import com.hantsylabs.example.ee7.taskboard.domain.TaskNotFoundException;
 import com.sun.faces.context.FacesFileNotFoundException;
 import java.util.Iterator;
 import java.util.logging.Level;

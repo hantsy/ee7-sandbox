@@ -4,7 +4,7 @@
               xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd"
               version="2.2">
     <factory>
-        <exception-handler-factory>com.hantsylabs.example.ee8.jsf.faces.DefaultExceptionHandlerFactory</exception-handler-factory>
+        <exception-handler-factory>com.hantsylabs.example.ee7.taskboard.faces.DefaultExceptionHandlerFactory</exception-handler-factory>
     </factory>
 
     <application>
@@ -19,7 +19,7 @@
     </application>
 
     <lifecycle>
-        <phase-listener>com.hantsylabs.example.ee8.jsf.faces.MessageHandler</phase-listener>
-        <phase-listener>com.hantsylabs.example.ee8.jsf.faces.RequestLoggingPhaseListener</phase-listener>
+        <phase-listener>com.hantsylabs.example.ee7.taskboard.faces.MessageHandler</phase-listener>
+        <phase-listener>com.hantsylabs.example.ee7.taskboard.faces.RequestLoggingPhaseListener</phase-listener>
     </lifecycle>
 </faces-config>

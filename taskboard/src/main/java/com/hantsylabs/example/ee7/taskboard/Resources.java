@@ -1,4 +1,4 @@
-package com.hantsylabs.example.ee8.jsf;
+package com.hantsylabs.example.ee7.taskboard;
 
 import java.util.logging.Logger;
 import javax.enterprise.context.Dependent;

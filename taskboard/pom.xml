@@ -4,7 +4,7 @@
     <artifactId>ee7-taskboard</artifactId>
     <packaging>war</packaging>
 
-    <name>TaskBoard: Java EE 7 Sample Application</name>
+    <name>TaskBoard(Java EE 7)</name>
 
     <parent>
         <groupId>com.hantsylabs.example.ee7</groupId>

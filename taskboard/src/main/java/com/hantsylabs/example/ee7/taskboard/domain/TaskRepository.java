@@ -1,4 +1,4 @@
-package com.hantsylabs.example.ee8.jsf.domain;
+package com.hantsylabs.example.ee7.taskboard.domain;
 
 import java.util.List;
 import javax.ejb.Stateless;

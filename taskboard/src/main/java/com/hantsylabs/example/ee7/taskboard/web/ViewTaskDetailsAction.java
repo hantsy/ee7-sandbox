@@ -1,8 +1,8 @@
-package com.hantsylabs.example.ee8.jsf.web;
+package com.hantsylabs.example.ee7.taskboard.web;
 
-import com.hantsylabs.example.ee8.jsf.domain.Task;
-import com.hantsylabs.example.ee8.jsf.domain.TaskNotFoundException;
-import com.hantsylabs.example.ee8.jsf.domain.TaskRepository;
+import com.hantsylabs.example.ee7.taskboard.domain.Task;
+import com.hantsylabs.example.ee7.taskboard.domain.TaskNotFoundException;
+import com.hantsylabs.example.ee7.taskboard.domain.TaskRepository;
 import java.io.Serializable;
 import java.util.logging.Level;
 
