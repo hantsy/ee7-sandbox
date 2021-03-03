@@ -19,3 +19,15 @@
 * [Treat](jpa-treat.md)
 * [CDI support](jpa-cdi.md)
 * [Programmatic Named Queries](jpa-programmatic-nq.md)
+
+## JAXRS
+
+* [Create a Java EE 7 project from Maven archteype](1-create-project-from-maven.md)
+* [Build RESTful APIs with Jaxrs](2-build-rest-api.md)
+* [Test Java EE application](2a-test-javaee.md)
+* [Exception handling and validation](3-exception-handling.md)
+* [Visualize APIs with Swagger UI](4-swagger.md)
+* [Authentication and Authorization](5-security.md)
+* [JWT token based authentication](5a-security-jwt.md)
+* [JWT and CDI](5b-security-cdi.md)
+* [CORS](cors.md)
