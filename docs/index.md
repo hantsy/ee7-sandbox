@@ -1,4 +1,4 @@
-Java EE 7 Notes
+# Java EE 7 Notes
 
 ## JSF 2.2
 
