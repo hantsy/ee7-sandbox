@@ -1,0 +1,207 @@
+repo_name: hantsy/ee7-sandbox
+report_id: 22856e7cc68d8069d176e607c3571204
+version: 0.1
+repo_type: Public
+timestamp: '2024-01-31T08:30:09+00:00'
+requested_by: hantsy
+provider: github
+branch: master
+detected_tools_count: 15
+tools:
+- name: CSS 3
+  description: The latest evolution of the Cascading Style Sheets language
+  website_url: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/6727/css.png
+  detection_source_url: https://github.com/hantsy/ee7-sandbox
+  detection_source: Repo Metadata
+- name: Java
+  description: A concurrent, class-based, object-oriented, language specifically designed
+    to have as few implementation dependencies as possible
+  website_url: https://www.java.com
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/995/K85ZWV2F.png
+  detection_source_url: https://github.com/hantsy/ee7-sandbox
+  detection_source: Repo Metadata
+- name: Java EE
+  description: The standard in community-driven enterprise software
+  website_url: http://www.oracle.com/technetwork/java/javaee/overview/index.html
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/4522/652rxwyK_400x400.png
+  detection_source_url: https://github.com/hantsy/ee7-sandbox/blob/master/common/pom.xml
+  detection_source: common/pom.xml
+  last_updated_by: hantsy
+  last_updated_on: 2013-07-26 14:42:21.000000000 Z
+- name: SQL
+  description: It is a domain-specific language used in programming
+  website_url: https://en.wikipedia.org/wiki/SQL
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/2271/default_068d33483bba6b81ee13fbd4dc7aab9780896a54.png
+  detection_source_url: https://github.com/hantsy/ee7-sandbox/blob/master/jpa/scripts/src/main/resources/META-INF/create-script.sql
+  detection_source: jpa/scripts/src/main/resources/META-INF/create-script.sql
+  last_updated_by: hantsy
+  last_updated_on: 2013-11-27 12:21:00.000000000 Z
+- name: jQuery
+  description: The Write Less, Do More, JavaScript Library.
+  website_url: http://jquery.com/
+  version: 2.1.4
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Javascript UI Libraries
+  image_url: https://img.stackshare.io/service/1021/lxEKmMnB_400x400.jpg
+  detection_source_url: https://github.com/hantsy/ee7-sandbox/blob/master/taskboard/pom.xml
+  detection_source: taskboard/pom.xml
+  last_updated_by: hantsy
+  last_updated_on: 2017-08-05 10:39:12.000000000 Z
+- name: Git
+  description: Fast, scalable, distributed revision control system
+  website_url: http://git-scm.com/
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Version Control System
+  image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/hantsy/ee7-sandbox
+  detection_source: Repo Metadata
+- name: GlassFish
+  description: The Open Source Java EE Reference Implementation
+  website_url: https://glassfish.java.net
+  open_source: false
+  hosted_saas: false
+  category: Application Hosting
+  sub_category: Web Servers
+  image_url: https://img.stackshare.io/service/3628/515GX-Cc_400x400.jpg
+  detection_source_url: https://github.com/hantsy/ee7-sandbox/blob/master/taskboard/pom.xml
+  detection_source: taskboard/pom.xml
+  last_updated_by: hantsy
+  last_updated_on: 2017-08-05 10:39:12.000000000 Z
+- name: javax:javaee-api
+  description: Java
+  license: GPL-2.0-with-classpath-exception
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/hantsy/ee7-sandbox/blob/master/common/pom.xml
+  detection_source: common/pom.xml
+  last_updated_by: hantsy
+  last_updated_on: 2013-07-26 14:42:21.000000000 Z
+- name: org.apache.commons:commons-lang3
+  description: Apache Commons Lang
+  version: '3.1'
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/hantsy/ee7-sandbox/blob/master/jpa/bulk/pom.xml
+  detection_source: jpa/bulk/pom.xml
+  last_updated_by: hantsy
+  last_updated_on: 2013-12-02 02:41:17.000000000 Z
+- name: org.eclipse.persistence:eclipselink
+  description: EclipseLink build based upon Git transaction 368d603
+  version: 2.5.1
+  license: EPL-1.0,AAL
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/hantsy/ee7-sandbox/blob/master/jpa/bulk/pom.xml
+  detection_source: jpa/bulk/pom.xml
+  last_updated_by: hantsy
+  last_updated_on: 2013-12-02 02:41:17.000000000 Z
+- name: org.glassfish:javax.faces
+  description: This is the master POM file for Oracle's Implementation of the JSF
+    2.2 Specification
+  version: 2.2.13
+  license: CDDL-1.1
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/hantsy/ee7-sandbox/blob/master/taskboard/pom.xml
+  detection_source: taskboard/pom.xml
+  last_updated_by: hantsy
+  last_updated_on: 2017-08-05 10:39:12.000000000 Z
+  vulnerabilities:
+  - name: Path Traversal in Eclipse Mojarra
+    cve_id: CVE-2018-14371
+    cve_url: https://github.com/advisories/GHSA-43q7-q5vp-3g68
+    detected_date: Nov 12
+    severity: high
+    first_patched: 2.3.7
+  - name: Cross-site Scripting in Eclipse Mojarra
+    cve_id: CVE-2019-17091
+    cve_url: https://github.com/advisories/GHSA-rjhx-c9qh-qh8f
+    detected_date: Nov 4
+    severity: moderate
+    first_patched: 2.2.20
+- name: org.hibernate:hibernate-validator
+  description: Hibernate's Bean Validation
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/hantsy/ee7-sandbox/blob/master/jsf/flow-library/flow-client/pom.xml
+  detection_source: jsf/flow-library/flow-client/pom.xml
+  last_updated_by: hantsy
+  last_updated_on: 2013-08-20 12:08:46.000000000 Z
+- name: org.webjars:bootstrap
+  description: WebJar for Bootstrap
+  version: 3.3.7
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/hantsy/ee7-sandbox/blob/master/taskboard/pom.xml
+  detection_source: taskboard/pom.xml
+  last_updated_by: hantsy
+  last_updated_on: 2017-08-05 10:39:12.000000000 Z
+- name: org.webjars:font-awesome
+  description: WebJar for Font Awesome
+  version: 4.7.0
+  license: Other
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/hantsy/ee7-sandbox/blob/master/taskboard/pom.xml
+  detection_source: taskboard/pom.xml
+  last_updated_by: hantsy
+  last_updated_on: 2017-08-05 10:39:12.000000000 Z
+- name: org.webjars:jquery
+  description: WebJar for jQuery
+  version: 2.1.4
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Maven Packages
+  image_url: https://img.stackshare.io/package/maven/image.png
+  detection_source_url: https://github.com/hantsy/ee7-sandbox/blob/master/taskboard/pom.xml
+  detection_source: taskboard/pom.xml
+  last_updated_by: hantsy
+  last_updated_on: 2017-08-05 10:39:12.000000000 Z
